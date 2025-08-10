@@ -7,22 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a595812-b2bc-41aa-93dd-abdf94551e20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WordCount/WordCount.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.challenge-01-wc-tool-dotnet/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.challenge-01-wc-tool-dotnet/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.challenge-01-wc-tool-dotnet/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.challenge-01-wc-tool-dotnet/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WordCount.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordCount/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/WordCount/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet/challenge-01-wc-tool-dotnet.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet/src/Domain/Enums/Option.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordCount/src/Domain/Enums/Option.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet/src/Domain/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordCount/src/Domain/Result.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet/src/Domain/Structs/LargeValidOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordCount/src/Domain/Structs/LargeValidOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet/src/Domain/Structs/ValidOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordCount/src/Domain/Structs/ValidOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge-01-wc-tool-dotnet/src/Domain/WordCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordCount/src/Domain/WordCounter.cs" afterDir="false" />
-    </list>
+    <list default="true" id="9a595812-b2bc-41aa-93dd-abdf94551e20" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +91,7 @@
       <workItem from="1754654912501" duration="6146000" />
       <workItem from="1754773118495" duration="10015000" />
       <workItem from="1754819055737" duration="2000" />
-      <workItem from="1754819067568" duration="2534000" />
+      <workItem from="1754819067568" duration="3209000" />
     </task>
     <servers />
   </component>

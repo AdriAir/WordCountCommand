@@ -6,9 +6,9 @@ namespace challenge_01_wc_tool_dotnet.Domain;
 
 public class WordCounter
 {
+    private readonly List<string> Arguments;
     private readonly Dictionary<Option, bool> Options;
     private readonly List<string> Filenames;
-    private List<string> Arguments;
     private readonly List<Result> FileResult;
 
     public WordCounter(string[] args)
@@ -123,8 +123,10 @@ public class WordCounter
                 Values = new Dictionary<Option, long>()
             };
             
-            string content = File.ReadAllText(filename);
-            string[]  lines = File.ReadAllLines(filename);
+            Encoding encoding = GetEncoding(filename);
+            
+            string content = File.ReadAllText(filename, encoding);
+            string[]  lines = File.ReadAllLines(filename, encoding);
             FileInfo fileInfo = new FileInfo(filename);
 
             if (Options[Option.BYTES])
@@ -224,4 +226,38 @@ public class WordCounter
 
         return formattedData.ToString();
     }
+    
+    private Encoding GetEncoding(string filename)
+    {
+        // Leer los primeros bytes para detectar BOM
+        byte[] bom = new byte[4];
+        using (var file = new FileStream(filename, FileMode.Open, FileAccess.Read))
+        {
+            file.Read(bom, 0, 4);
+        }
+
+        // UTF-8 BOM
+        if (bom[0] == 0xEF && bom[1] == 0xBB && bom[2] == 0xBF)
+            return Encoding.UTF8;
+
+        // UTF-16 LE BOM
+        if (bom[0] == 0xFF && bom[1] == 0xFE)
+            return Encoding.Unicode; // UTF-16 LE
+
+        // UTF-16 BE BOM
+        if (bom[0] == 0xFE && bom[1] == 0xFF)
+            return Encoding.BigEndianUnicode; // UTF-16 BE
+
+        // UTF-32 LE BOM
+        if (bom[0] == 0xFF && bom[1] == 0xFE && bom[2] == 0x00 && bom[3] == 0x00)
+            return Encoding.UTF32;
+
+        // UTF-32 BE BOM
+        if (bom[0] == 0x00 && bom[1] == 0x00 && bom[2] == 0xFE && bom[3] == 0xFF)
+            return new UTF32Encoding(true, true);
+
+        // Si no hay BOM, se asume UTF-8
+        return Encoding.UTF8;
+    }
+
 }
