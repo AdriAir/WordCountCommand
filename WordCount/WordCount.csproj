@@ -17,7 +17,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="docs\" />
       <Folder Include="src\Domain\Interfaces\" />
     </ItemGroup>
 

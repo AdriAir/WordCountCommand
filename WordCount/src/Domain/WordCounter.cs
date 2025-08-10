@@ -11,9 +11,9 @@ public class WordCounter
     private readonly List<string> Filenames;
     private readonly List<Result> FileResult;
 
-    public WordCounter(string[] args)
+    public WordCounter(string[] arguments)
     {
-        Arguments = args.ToList();
+        Arguments = arguments.ToList();
         Options = GetOptions();
         Filenames = GetFilenames();
 
