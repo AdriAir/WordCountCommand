@@ -4,6 +4,6 @@ namespace challenge_01_wc_tool_dotnet.Domain;
 
 public class Result
 {
-    public string Filename { get; set; }
-    public Dictionary<Option, long> Values { get; set; }
+    public string? Filename { get; init; }
+    public Dictionary<Option, long>? Values { get; init; }
 }

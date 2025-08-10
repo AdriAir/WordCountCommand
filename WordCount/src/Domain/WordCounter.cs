@@ -91,6 +91,10 @@ public class WordCounter
 
     private List<string> GetFilenames()
     {
+
+        if (Arguments.Count <= 0)
+            throw new ArgumentException($"No files given");
+        
         var filenames = new List<string>();
 
         foreach (var filename in Arguments)
@@ -115,7 +119,8 @@ public class WordCounter
             
             Result result = new Result
             {
-                Filename = filename
+                Filename = filename,
+                Values = new Dictionary<Option, long>()
             };
             
             string content = File.ReadAllText(filename);
@@ -191,27 +196,27 @@ public class WordCounter
         {
             if (Options[Option.LINES])
             {
-                formattedData.Append($"{result.Values[Option.LINES]} ");
+                formattedData.Append($"{result.Values?[Option.LINES]} ");
             }
 
             if (Options[Option.WORDS])
             {
-                formattedData.Append($"{result.Values[Option.WORDS]} ");
+                formattedData.Append($"{result.Values?[Option.WORDS]} ");
             }
             
             if (Options[Option.CHARS])
             {
-                formattedData.Append($"{result.Values[Option.CHARS]} ");
+                formattedData.Append($"{result.Values?[Option.CHARS]} ");
             }
 
             if (Options[Option.BYTES])
             {
-                formattedData.Append($"{result.Values[Option.BYTES]} ");
+                formattedData.Append($"{result.Values?[Option.BYTES]} ");
             }
 
             if (Options[Option.MAX_LINE_LENGTH])
             {
-                formattedData.Append($"{result.Values[Option.MAX_LINE_LENGTH]}\t");
+                formattedData.Append($"{result.Values?[Option.MAX_LINE_LENGTH]}\t");
             }
 
             formattedData.AppendLine(result.Filename);

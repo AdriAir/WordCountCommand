@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "challenge-01-wc-tool-dotnet", "challenge-01-wc-tool-dotnet\challenge-01-wc-tool-dotnet.csproj", "{F94E7A8C-FE38-4D12-87C3-C46E71D0A393}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount", "WordCount\WordCount.csproj", "{F94E7A8C-FE38-4D12-87C3-C46E71D0A393}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
